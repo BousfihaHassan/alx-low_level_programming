@@ -5,7 +5,7 @@
  *
  * Description: print all alphabet in lowercase
  *
- * Return: Always 0 (seccess)
+ * Return: Always 0 (Success)
 */
 
 int main(void)
@@ -15,6 +15,7 @@ int main(void)
 	while (ch <= 'z')
 	{
 		putchar(ch);
+		ch++;
 	}
 	putchar('\n');
 

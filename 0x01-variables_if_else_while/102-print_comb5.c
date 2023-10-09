@@ -10,31 +10,32 @@
 
 int main(void)
 {
-	int i = 0;
-	int j = 1;
-	int k = 2;
+	int firstDigit = 0, seconDigit;
 
-	while (i <= 7)
+	while (firstDigit <= 99)
 	{
-		while (j <= 8)
+		seconDigit = firstDigit;
+		while (seconDigit <= 99)
 		{
-			while (k <= 9)
+			if (seconDigit != firstDigit)
 			{
-				putchar((i % 10) + '0');
-				putchar((j % 10) + '0');
-				putchar((k % 10) + '0');
-				if (!(i == 7 && j == 8 && k == 9))
+				putchar((firstDigit / 10) + 48);
+				putchar((firstDigit % 10) + 48);
+				putchar(' ');
+				putchar((seconDigit / 10) + 48);
+				putchar((seconDigit % 10) + 48);
+
+				if (firstDigit != 98 || seconDigit != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
-				k++;
 			}
-			k = ++j + 1;
+			seconDigit++;
 		}
-		j = ++i + 1;
+		firstDigit++;
 	}
-	putchar('\n');
 
+	putchar('\n');
 	return (0);
 }

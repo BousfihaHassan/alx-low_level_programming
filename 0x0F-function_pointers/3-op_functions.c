@@ -1,14 +1,11 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "3-calc.h"
 
 /**
- * op_add - function with two arguments
- * @a: int type
- * @b: int type
+ * op_add - returns sum of two numbers
+ * @a: int parameter
+ * @b: int parameter
  *
- * Description: add two input
- * Return: value
+ * Return: (@a + @b)
  */
 int op_add(int a, int b)
 {
@@ -16,12 +13,11 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - function with two arguments
- * @a: int type
- * @b: int type
+ * op_sub - returns difference of two numbers
+ * @a: int parameter
+ * @b: int parameter
  *
- * Description: subtract two input
- * Return: value
+ * Return: (@a - @b)
  */
 int op_sub(int a, int b)
 {
@@ -29,12 +25,11 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - function with two arguments
- * @a: int type
- * @b: int type
+ * op_mul - returns product of two numbers
+ * @a: int parameter
+ * @b: int parameter
  *
- * Description: multiply two input
- * Return: value
+ * Return: (@a * @b)
  */
 int op_mul(int a, int b)
 {
@@ -42,37 +37,25 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - function with two arguments
- * @a: int type
- * @b: int type
+ * op_div - returns quotient of two numbers
+ * @a: int parameter
+ * @b: int parameter
  *
- * Description: divide two input
- * Return: value
+ * Return: (@a / @b)
  */
 int op_div(int a, int b)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	return (a / b);
 }
 
 /**
- * op_mod - function with two arguments
- * @a: int type
- * @b: int type
+ * op_mod - returns the remainder from division of two numbers
+ * @a: int parameter
+ * @b: int parameter
  *
- * Description: mod two input
- * Return: value
+ * Return: (@a % @b)
  */
 int op_mod(int a, int b)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	return (a % b);
 }
